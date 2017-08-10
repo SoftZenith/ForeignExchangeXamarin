@@ -12,7 +12,7 @@ namespace ForeignExchangeXamarin
         public App()
         {
             InitializeComponent();
-
+            
             MainPage = new ForeignExchangeXamarin.MainPage();
         }
 
