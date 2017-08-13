@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ForeignExchangeXamarin.Views.MainPage"
+    BindingContext="{Binding Main, Source={StaticResource Locator}}">
+    <ContentPage.Content>
+        <StackLayout
+            Padding="30">
+            <Label
+                HorizontalOptions="Center"
+                FontSize="Large"
+                Text="Foreign Exchange (V1.2)">
+            </Label>
+
+            <Label
+                Text="Pesos: ">
+            </Label>
+
+            <Entry
+                Text="{Binding Pesos, Mode=TwoWay}"
+                Keyboard="Numeric"
+                PlaceholderColor="Black"
+                Placeholder="Enter amount in pesos...">
+            </Entry>
+
+            <Button
+                Command="{Binding ConvertCommand}"
+                Text="Convert">
+            </Button>
+
+            <Label
+                Text="Dollars: ">
+            </Label>
+
+            <Entry
+                Text="{Binding Dollars, Mode=TwoWay}"
+                IsEnabled="False"
+                PlaceholderColor="Black"
+                Placeholder="Value in Dollars...">
+            </Entry>
+
+
+            <Label
+                Text="Euros: ">
+            </Label>
+
+            <Entry
+                Text="{Binding Euros, Mode=TwoWay}"
+                IsEnabled="False"
+                PlaceholderColor="Black"
+                Placeholder="Value in Euros...">
+            </Entry>
+
+
+            <Label
+                Text="Pounds: ">
+            </Label>
+
+            <Entry
+                Text="{Binding Pounds, Mode=TwoWay}"
+                IsEnabled="False"
+                PlaceholderColor="Black"
+                Placeholder="Value in Pounds...">
+            </Entry>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
